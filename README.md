@@ -10,7 +10,7 @@ Each week has its own folder containing daily subfolders for the 5 working days 
 
   - In your solution file briefly explain the algoritmic complexity of your solution 
 - **`notes.md`**: Optional file for notes, tips, or explanations related to the day's topic.
-- **`overview.md`**: A file providing a summary of the week's topic, goals, and additional resources.
+- **`Readme.md`**: A file providing a summary of the week's topic, goals, and additional resources.
 #### Example Folder Structure
 ```plaintext
 Week-1/
@@ -25,7 +25,7 @@ Week-1/
           |-- cpp/
               |-- contributor1_solution.cpp
       |-- notes.md
-      |-- overview.md
+      |-- Readme.md
   |-- Day-2/
       |-- questions.md
       |-- solutions/
@@ -33,7 +33,7 @@ Week-1/
           |-- java/
           |-- cpp/
       |-- notes.md
-      |-- overview.md
+      |-- Readme.md
   ...
   |-- Day-5/
       |-- questions.md
@@ -42,7 +42,7 @@ Week-1/
           |-- java/
           |-- cpp/
       |-- notes.md
-      |-- overview.md
+      |-- Readme.md
 ...
 Week-52/
   |-- Day-1/
