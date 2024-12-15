@@ -78,4 +78,6 @@ The stack heights are reduced as follows:
 
 All three stacks now have **height = 5**, the value to return.
 
+link: [https://www.hackerrank.com/challenges/equal-stacks/problem?isFullScreen=true]
+
 
