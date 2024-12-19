@@ -1,29 +1,34 @@
-## Move Zeroes
+# 20. Valid Parentheses
+Given a string *s* containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\
+An input string is valid if:
+-  Open brackets must be closed by the same type of brackets.
+-  Open brackets must be closed in the correct order.
+-  Every close bracket has a corresponding open bracket of the same type.
 
-Given an integer array `nums`, move all `0`'s to the end of it while maintaining the relative order of the non-zero elements.
+*Example 1:*
+```
+Input: s = "()"
+Output: true
+```
+*Example 2:*
+```
+Input: s = "()[]{}"
+Output: true
+```
+*Example 3:*
+```
+Input: s = "(]"
+Output: false
+```
+*Example 4:*
+```
+Input: s = "([])"
+Output: true
+```
+## Constraints:
+- 1 <= s.length <= 10
+- s consists of parentheses only '( )  [ ]  { }'.
 
-Note that you must do this in-place without making a copy of the array.
+[Link to question](https://leetcode.com/problems/valid-parentheses/description/?envType=problem-list-v2&envId=stack)
 
-**Example 1:**
 
-**Input:** nums = [0,1,0,3,12]
-**Output:** [1,3,12,0,0]
-
-**Example 2:**
-
-**Input:** nums = [0]
-**Output:** [0]
- 
-
-**Constraints:**
-
-- `1 <= nums.length <= 104`
-- `-231 <= nums[i] <= 231 - 1`
- 
-
-**Follow up:** Could you minimize the total number of operations done?
-
----
-
-## **Source of Problem**
-[Leetcode Move zeroes](https://leetcode.com/problems/move-zeroes/description/)
