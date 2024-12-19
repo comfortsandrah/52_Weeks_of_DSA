@@ -1,15 +1,45 @@
-## Linked Lists - Alternating Split
+You have an empty sequence, and you will be given *N* queries. Each query is one of these three types:
+- x -Push the element x into the stack.
+- Delete the element present at the top of the stack.
+- Print the maximum element in the stack.
 
-Write an AlternatingSplit() function that takes one list and divides up its nodes to make two smaller lists. The sublists should be made from alternating elements in the original list. So if the original list is `a -> b -> a -> b -> a -> null` then one sublist should be `a -> a -> a -> null` and the other should be `b -> b -> null`.
+## Function Description
 
-```python
-var list = 1 -> 2 -> 3 -> 4 -> 5 -> null
-alternatingSplit(list).first === 1 -> 3 -> 5 -> null
-alternatingSplit(list).second === 2 -> 4 -> null
+Complete the getMax function in the editor below.\
+getMax has the following parameters:
+- string operations[n]: operations as strings
+
+### Returns
+- int[]: the answers to each type 3 query
+
+### Input Format
+The first line of input contains an integer, **n**. The next **n** lines each contain an above mentioned query.
+
+### Constraints
 ```
-For simplicity, we use a Context object to store and return the state of the two linked lists. A Context object containing the two mutated lists should be returned by AlternatingSplit().
+1 <= n <= 10^5
+1 <= x <= 10^9
+1 <= n <= 3
+```
+All queries are valid.
+### Sample Input
+```
+STDIN Function
+----- --------
+10 operations[] size n = 10
+1 97 operations = ['1 97', '2', '1 20', ....]
+2
+1 20
+2
+1 26
+1 20
+2
+3
+1 91
+3
+```
+### Sample Output
+26\
+91
 
-If the passed in head node is null/None/nil or a single node, throw an error.
-
-## **Source of Problem**
-[CodeWars Linked lists - Alternating Split](https://www.codewars.com/kata/55dd5386575839a74f0000a9/train/javascript)
+[Link to the question](https://www.hackerrank.com/challenges/maximum-element/problem?isFullScreen=true)

@@ -1,44 +1,29 @@
-## Closed Brackets String
-The function is given a string consisting of a collection of three characters:
-
-- "(" open bracket
-- ")" closed bracket
-- "J" Joker, which can be replaced by "(", ")" or ""
-
-Develop a solution to determine if the given string represents a proper sequence of parenthesis; return `True / False`. Each open bracket on the left should have a corresponding closed bracket on the right. For example "(()())" is a proper sequence, "()(()" is not a proper sequence. The presence of Jokers adds an extra level of difficulty to the analysis because each "J" makes three possibilities to consider. An empty string is considered a valid string because it does not contain unbalanced brackets.
-
-**Examples**
-
-```python
-closed_brackets("(J))") ➞ True
-# J can be replaced with (
-
-closed_brackets("(") ➞ False
-# Unbalanced open bracket.
-
-closed_brackets("") ➞ True
-# Empty string is a valid sequence.
-
-closed_brackets("()J(") ➞ False
-# Not possible to balance the brackets.
-
-closed_brackets("J") ➞ True
-# J can be replaced with an empty string.
-
-closed_brackets(")(") ➞ False
-# Numbers of ( and ) are the same but they are in the wrong places.
-
-closed_brackets("J)(J") ➞ True
-# First 'J' can be replaced with '(' and second with ')'.
-
-closed_brackets("()") ➞ True
-# A proper sequence of balanced brackets.
+# 844. Backspace String Compare
+Given two strings *s* and *t*, return **true** if they are equal when both are typed into empty text editors. '#' means a
+backspace character.
+Note that after backspacing an empty text, the text will continue empty.
+## Example 1:
+```
+Input: s = "ab#c", t = "ad#c"
+Output: true
+Explanation: Both s and t become "ac".
+```
+## Example 2:
+```
+Input: s = "ab##", t = "c#d#"
+Output: true
+Explanation: Both s and t become "".
 ```
 
-## Input Constraints
-- 0 <= len(s) <= 100
+## Example 3:
+```
+Input: s = "a#c", t = "b"
+Output: false
+Explanation: s becomes "c" while t becomes "b".
+```
+### Constraints:
+- 1 <= s.length, t.length <= 200
+- s and t only contain lowercase letters and '#' characters.
 
----
-
-## **Source of Problem**
-[CodeWars Closed Brackets String](https://www.codewars.com/kata/64b771989416793927fbd2bf/train/python)
+#### Follow up: Can you solve it in O(n) time and O(1) space?
+[(https://leetcode.com/problems/backspace-string-compare/description/?envType=problem-list-v2&envId=stack&)]
