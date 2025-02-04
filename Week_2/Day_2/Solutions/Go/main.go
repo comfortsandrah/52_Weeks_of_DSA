@@ -32,21 +32,19 @@ func equalStacks(h1 []int32, h2 []int32, h3 []int32) int32 {
 	i, j, k := 0, 0, 0
 
 	for !(sumH1 == sumH2 && sumH2 == sumH3) {
-		if len(h1) == 0 || len(h2) == 0 || len(h3) == 0 {
+
+		if i == len(h1) || j == len(h2) || k == len(h3) {
 			return 0
 		}
 
-		if sumH1 > sumH2 && sumH1 > sumH3 {
-			h1 = dequeue(h1)
-			sumH1 = sumOfArray(h1)
+		if sumH1 >= sumH2 && sumH1 >= sumH3 {
+			sumH1 -= h1[i]
 			i++
-		} else if sumH2 > sumH1 && sumH2 > sumH3 {
-			h2 = dequeue(h2)
-			sumH2 = sumOfArray(h2)
+		} else if sumH2 >= sumH1 && sumH2 >= sumH3 {
+			sumH2 -= h2[j]
 			j++
 		} else {
-			h3 = dequeue(h3)
-			sumH3 = sumOfArray(h3)
+			sumH3 -= h3[k]
 			k++
 		}
 	}
