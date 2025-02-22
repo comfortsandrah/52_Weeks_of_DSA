@@ -1,0 +1,40 @@
+class TreeNode:
+    def __init__(self, value, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
+
+class Solution:
+    def maxRootToLeafSum(self, root):
+       
+        def helper(node, current_sum):
+            if not node: 
+                return 0
+            
+           
+            current_sum += node.value
+            
+            # If it's a leaf node, return the current sum
+            if not node.left and not node.right:
+                return current_sum
+            
+            # Recurse down the left and right children
+            left_sum = helper(node.left, current_sum)
+            right_sum = helper(node.right, current_sum)
+            
+            
+            return max(left_sum, right_sum)
+
+        # Edge case: if the tree is empty
+        if not root:
+            return 0
+        
+        return helper(root, 0)
+
+# Example usage
+root = TreeNode(17)
+root.left = TreeNode(3, TreeNode(2))
+root.right = TreeNode(-10, TreeNode(16), TreeNode(1, TreeNode(13)))
+
+solution = Solution()
+print(solution.maxRootToLeafSum(root))  # Output: 23
