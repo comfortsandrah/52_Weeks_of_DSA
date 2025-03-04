@@ -22,6 +22,7 @@ The function must return a **long integer** that represents the number of k-suba
 ### **Function Signature**
 ```python
 def kSub(k: int, nums: List[int]) -> int:
+```
     
 ##   **Source of Problem**
 [HackerRank Valid Path in a Graph](https://www.hackerrank.com/challenges/k-subarrays/problem)
